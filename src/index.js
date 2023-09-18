@@ -15,3 +15,8 @@ function counText() {
     let text = document.form_main.text.value;
     document.getElementById('word-count').innerHTML = text.length;
 }
+
+function counText() {
+    let text = document.form_main.text.value;
+    document.getElementById('word-count').innerHTML = text.length;
+}
