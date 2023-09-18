@@ -1,0 +1,60 @@
+header {
+    width: fit-content;
+    color:black;
+    background-color:#F8DC9B;
+    border-radius:20px;
+    font-family: "Consolas";
+    border-width:2px;
+    border-color:black;
+    border-style: solid;
+    padding: 10px;
+    font-size:small;
+}
+
+body {
+    background-image: url("fondo.png");
+    background-attachment: fixed;
+
+}
+footer {
+    color:black;
+    font-size: medium;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: right;
+    font-weight: bold;
+}
+
+.analyzer {
+    color:black;
+    background-color:#C4AB71;
+    list-style: none;
+    font-family: "Courier New";
+    border-style: solid;
+    border-radius: 20px;
+    border-width:1px;
+    width: 200px;
+    padding:15px;
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+}
+
+.textarea [name="user input"] {
+    color:pink;
+    font-size: 50px;
+    border: red;
+}
+
+#reset-button {
+    background-color: rgba(138, 95, 95, 0.603);
+    color:black;
+    border-style:solid;
+    border-radius: 20px;
+    border-width: 1px;
+    width: 100px;
+    height:50px;
+}
+
+div {
+    text-align: center;
+}
