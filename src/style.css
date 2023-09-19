@@ -1,5 +1,4 @@
 header {
-    width: fit-content;
     color:black;
     background-color:#F8DC9B;
     border-radius:20px;
@@ -9,6 +8,8 @@ header {
     border-style: solid;
     padding: 10px;
     font-size:small;
+    text-align: center;
+    margin:0px 30pc;
 }
 
 body {
@@ -43,14 +44,12 @@ footer {
     color:pink;
     font-size: 50px;
     border: red;
+    text-align: center;
 }
 
 #reset-button {
     background-color: rgba(138, 95, 95, 0.603);
     color:black;
-    border-style:solid;
-    border-radius: 20px;
-    border-width: 1px;
     width: 100px;
     height:50px;
 }

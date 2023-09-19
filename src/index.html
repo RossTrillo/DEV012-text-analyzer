@@ -12,7 +12,7 @@
 
 <body>
   <div>
-    <textarea name="user input" cols="80" rows="8" placeholder="Escriba su texto aquí" oninput="contarLetras"></textarea>
+    <textarea name="user-input" cols="80" rows="8" placeholder="Escriba su texto aquí" oninput="countText()"></textarea>
     <ul>
       <li class="analyzer palabras"  data-testid="word-count">Conteo de palabras</li>
       <li class="analyzer caracteres" data-testid="character-count">Conteo de carácteres</li>
@@ -21,9 +21,8 @@
       <li class="analyzer suma" data-testid="number-sum">Suma los números</li>
       <li class="analyzer longitud" data-testid="word-length-average">Longitud media</li>
     </ul>
-  
-      <button id="reset-button" type="button">Limpiar</button>
-
+    
+      <button type="button" id="reset-button">Limpiar</button>
   </div>
 
   <footer>
