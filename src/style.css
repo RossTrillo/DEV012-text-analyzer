@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 header {
     color:black;
     background-color:#F8DC9B;
@@ -30,20 +35,21 @@ footer {
     background-color:#C4AB71;
     list-style: none;
     font-family: "Courier New";
+    border: solid black;
     border-style: solid;
     border-radius: 20px;
     border-width:1px;
-    width: 200px;
-    padding:15px;
+    width: 33%;
+    padding: 9px 0%;
     text-align: center;
-    margin: 20px;
-    display: inline-block;
+    display:inline-block;
+    margin:10px 100px;
 }
 
-.textarea [name="user input"] {
-    color:pink;
-    font-size: 50px;
+textarea[name="user-input"] {
+    color:black;
     border: red;
+    margin:20px 400px;
     text-align: center;
 }
 
@@ -52,8 +58,8 @@ footer {
     color:black;
     width: 100px;
     height:50px;
-}
-
-div {
+    margin:20px 38pc;
+    cursor: pointer;
     text-align: center;
 }
+
