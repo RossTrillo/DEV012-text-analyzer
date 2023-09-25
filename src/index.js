@@ -13,65 +13,67 @@ document.querySelector("li[data-testid='number-count']").innerHTML="Conteo de n�
 
 document.querySelector("li[data-testid='number-sum']").innerHTML="Suma de números:"+ 0;
 
-document.querySelector("li[data-testid='word-length-average']").innerHTML="Longitud media:"+ 0;
+document.querySelector("li[data-testid='word-length-average']").innerHTML="Longitud media de palabras:"+ 0;
 
 //Limpiar botón
 let botones = document.getElementById("reset-button");
 let textarea = document.querySelector("textarea[name='user-input']");
 
 botones.addEventListener("click",function() {
-        textarea.value = "Ross";
+        textarea.value = "";
         })
 
 // CONTEO PALABRAS
+let primero = document.querySelector("li[data-testid='word-count']");      
+   // let conteoPalabritas = analyzer.getWordCount("ROSARIO TRILLO");
+
 textarea.addEventListener("input" , function(){
-    let primero = document.querySelector("li[data-testid='word-count']");      
-    let conteoPalabritas = analyzer.getWordCount("ROSARIO TRILLO");
-
+    let conteoPalabritas = analyzer.getWordCount(textarea.value);
     primero.textContent = "Conteo de palabras: " + conteoPalabritas;
-
-})
+        })
 
 // CONTEO CARACTERES
+let segundo = document.querySelector("li[data-testid='character-count']");
+//let textareaCaracteres = document.querySelector("textarea[name='user-input']");
 
 textarea.addEventListener("input" , function() {
-    let segundo = document.querySelector("li[data-testid='character-count']");
-    let conteoCaracateress = analyzer.getCharacterCount("Rosario");
-
-    segundo.textContent = "Conteo de caracteres: " + conteoCaracateress;
-})
+    let conteoCaracateress = analyzer.getCharacterCount(textarea.value);
+        segundo.textContent = "Conteo de caracteres: " + conteoCaracateress;
+        })
 
 
 //CONTEO CARACTERES SIN ESPACIO
+let tercero = document.querySelector("li[data-testid='character-no-spaces-count']");
 
-textarea.addEventListener("input" , function() {
-    let tercero = document.querySelector("li[data-testid='character-no-spaces-count']");
-    let conteoSinEspacio = analyzer.getCharacterCountExcludingSpaces("Ros@rio");
-
-    tercero.textContent = "Conteo caracteres sin espacio: " + conteoSinEspacio;
-
+textarea.addEventListener("input", function() {
+    let conteoCaracteresSinEspacio = analyzer.getCharacterCountExcludingSpaces(textarea.value);
+    tercero.textContent = "Conteo caracteres sin espacio: " + conteoCaracteresSinEspacio;
 })
 
+//Conteo de números:
+let cuarto = document.querySelector("li[data-testid='number-count']");
 
-//Limpiar botón
-//let conteoTexto = document.querySelector("textarea[name='user-input']");
-//conteoTexto.addEventListener("input",actualizar);
+textarea.addEventListener("input", function(){
+    let conteoNumeros= analyzer.getNumberCount(textarea.value);
+    cuarto.textContent = "Conteo de números: " + conteoNumeros;
+})
 
-//function actualizar(e) {
-  //  document.querySelector("li[data-testid='character-count']").innerHTML="Conteo de caracteres:"+ analyzer.getCharacterCount(e.target.value);
-//}
-// conteo de caracteres
-//let boton = document.getElementById("reset-button");
-//let limpiar = document.querySelector("textarea[name='user-input']");
+//Suma de números:
+let quinto = document.querySelector("li[data-testid='number-sum']");
 
-//boton.addEventListener("click",function() {
-  //  limpiar.value = ""
-    //document.querySelector("li[data-testid='character-count']").innerHTML="Conteo de caracteres:"+ 0;
-//})
+textarea.addEventListener("input", function () {
+    let sumaNumeros = analyzer.getNumberSum(textarea.value);
+    quinto.textContent = "Suma de números: " + sumaNumeros;
+})
 
-//conteo de palabras
+// Longitud media
 
+let sexto = document.querySelector("li[data-testid='word-length-average']");
 
+textarea.addEventListener("input", function() {
+    let longitudMedia = analyzer.getAverageWordLength(textarea.value);
+    sexto.innerHTML = "Longitud media de palabras: " + longitudMedia;
+});
 
 
 
