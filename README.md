@@ -29,14 +29,7 @@ La aplicación utiliza HTML de manera semántica, incluyendo elementos como:
 - `<footer>` para mostrar la información del desarrollador.
 
 ### Uso de CSS
-La aplicación hace uso de selectores de CSS y modelos de caja (border, margen, padding)
-| Uso de selectores de CSS | Descripción
-| ------ | ------ |
-|  Selectores CSS de tipo|  Para darle estilo al <header> y al <footer>.
-| Selectores CSS de class | Para darle estilo a los <li> descrito anteriormente.
-| Selectores de atributo | Para darle estilo al <textarea> usando el atributo name.
-| Selectores de CSS de Id | Para darle estilo al <button> con el atributo id en el valor reset-button.
-| Modelo de caja | Las clases css de los <li> hijos del <ul> definen un estilo usando las propiedades del modelo de caja.(background, border, margin, padding)
+Se utiliza CSS para dar estilo a la aplicación, incluyendo selectores de tipo, de clase, de atributo y de ID, así como propiedades del modelo de caja como border, margen y padding.
 
 ### Uso de JavaScript
 La aplicación hace uso de selectores del DOM, con querySelector y getElementById. Se tiene un manejo de eventos del DOM con un Event Listener para escuchar un evento "input" del <textarea> para actualizar las métricas cuando se escriba en el cuadro de texto.Y un evento "click" del <button> que limpia el contenido de la caja de texto. la aplicación hace uso del atributo textContent o innerHTML para atualizar las métricas de los <li>.
