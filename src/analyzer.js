@@ -1,61 +1,55 @@
 const analyzer = {  
 
- //Elimiar espacios, números y signos 
- //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
+  //Elimiar espacios, números y signos 
+  //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
   getWordCount: (text) => {
-    let conteoPalabras = text.replace(/[^a-zA-Z\s]/g, '');
-    let palabrasSin = conteoPalabras.split(/\s+/);
-    const palabrasSinEspacio = palabrasSin.filter(function(palabra) { //No comprendo esta línea de código
+    const conteoPalabras = text.replace(/[^a-zA-Z\s]/g, '');
+    const palabrasSin = conteoPalabras.split(/\s+/);
+    const palabrasSinEspacio = palabrasSin.filter(function(palabra) {
       return palabra.length > 0;
     })
-    return palabrasSinEspacio.length + ""; 
+    return palabrasSinEspacio.length;
   },
  
   //return text.length;
   //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
   getCharacterCount: (text) => {
-    if (text.length > 0) { 
-    return text.length;}
-    else {
-      return 0;
+    let count = 0;
+    for (let i = 0; i < text.length; i++) {
+      count++;
     }
+    return count; 
   },
 
   //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
   getCharacterCountExcludingSpaces: (text) => {
-
-    let conteoCaracteres = text.replace(/[^0-9a-zA-Z]/g, '');
-    let conteoCaracteresSin = conteoCaracteres.replace(/\s+/g, '');
+    const conteoCaracteres = text.replace(/[^0-9a-zA-Z]/g, '');
+    const conteoCaracteresSin = conteoCaracteres.replace(/\s+/g, '');
     return conteoCaracteresSin.length;
   },
 
   //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
   getAverageWordLength: (text) => {
-    let conteoPalabra = text.split(/\s+/);
-    
-    let sumaLongitudes = 0;
-
-    for (let i = 0; i < conteoPalabra.length; i++) {
-      sumaLongitudes = sumaLongitudes + conteoPalabra[i].length;
-    }
-
-    const longitudesMedia = sumaLongitudes / conteoPalabra.length;
-    return longitudesMedia;
+    const conteoPalabra = text.split(/\s+/);
+    const promedioCaracteres = text.replace(/\s+/g, '');
+    const longituMedia = promedioCaracteres.length / conteoPalabra.length;
+    const palabraRedondeanda = longituMedia.toFixed(2);
+    return parseFloat(palabraRedondeanda);
 
   },
 
   //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
   getNumberCount: (text) => {
-    const numerosEncontrados = text.match(/\d/g);
+    const numerosEncontrados = text.match(/\b\d+(\.\d+)?\b/g);
     if (numerosEncontrados) {
-        return numerosEncontrados.length;
+      return numerosEncontrados.length;
     } else {
-        return 0;
+      return 0;
     }
   },
   //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
   getNumberSum: (text) => {
-    const sumaNum = text.match(/(\d+\.\d+|\d+)/g);
+    const sumaNum = text.match(/(?:^|\s)\d+\.\d+|\d+\b/g);
     if (!sumaNum) {
       return 0;
     }
