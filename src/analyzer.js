@@ -49,7 +49,7 @@ const analyzer = {
   },
   //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
   getNumberSum: (text) => {
-    const sumaNum = text.match(/(?:^|\s)\d+\.\d+|\d+\b/g);
+    const sumaNum = text.match(/\b\d+\.\d+\b|\b\d+\b/g);
     if (!sumaNum) {
       return 0;
     }
