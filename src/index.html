@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html>
- <header>
-  <h1>Analizador de texto</h1>
- </header> 
+  <head>
+    <meta charset="utf-8" />
+    <title>Analizador de Texto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Analizador de texto</title>
-  <link rel="stylesheet" href="style.css" /><br>
-</head>
-
-<body>
-    <textarea name="user-input" cols="60" rows="10" placeholder="Escriba su texto aquí" ></textarea>
+  <body>
+    <header>
+      <h1>Analizador de texto</h1>
+    </header>
+    <textarea
+      name="user-input"
+      cols="60"
+      rows="10"
+      placeholder="Escriba su texto aquí"
+    ></textarea>
     <ul>
-      <li class="analyzer"  data-testid="word-count">Conteo de palabras: 0</li>
-      <li class="analyzer" data-testid="character-count">Conteo de carácteres: 0</li>
-      <li class="analyzer"  data-testid="character-no-spaces-count">Conteo de caracteres sin espacio: 0</li>
+      <li class="analyzer" data-testid="word-count">Conteo de palabras: 0</li>
+      <li class="analyzer" data-testid="character-count">
+        Conteo de carácteres: 0
+      </li>
+      <li class="analyzer" data-testid="character-no-spaces-count">
+        Conteo de caracteres sin espacio: 0
+      </li>
       <li class="analyzer" data-testid="number-count">Conteo de números: 0</li>
       <li class="analyzer" data-testid="number-sum">Suma de números: 0</li>
-      <li class="analyzer" data-testid="word-length-average">Longitud media de palabras: 0</li>
+      <li class="analyzer" data-testid="word-length-average">
+        Longitud media de palabras: 0
+      </li>
     </ul>
-    
-      <button type="button" id="reset-button">Limpiar</button>
 
-  <footer>
-    <p>By: Rosario Trillo A.</p>
-  </footer>
-  <script src="index.js" type="module"></script>
-</body>
+    <button type="button" id="reset-button">Limpiar</button>
+
+    <footer>
+      <p>By: Rosario Trillo A.</p>
+    </footer>
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
