@@ -19,7 +19,7 @@ header {
 }
 
 body {
-    background-image: url("Texto.jpg.png");
+    background-image: url("Libro.jpg");
     background-attachment: fixed;
     background-size: cover;
 }
